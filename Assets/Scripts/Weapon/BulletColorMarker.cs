@@ -97,12 +97,12 @@ public class BulletColorMarker : MonoBehaviour
             if (color == "violet")
             {
                 this.color = "violet";
-                sr.color = UnityEngine.Color.magenta;
+                sr.color = new Color32(127, 0, 255, 255);
             }
             else if (color == "orange")
             {
                 this.color = "orange";
-                sr.color = UnityEngine.Color.cyan;
+                sr.color = new Color32(252, 147, 3, 255);
             }
             else if (color == "green")
             {
