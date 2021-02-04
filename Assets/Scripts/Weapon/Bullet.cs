@@ -51,6 +51,11 @@ public class Bullet : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
     #endregion
 
 }

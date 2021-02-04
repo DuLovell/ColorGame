@@ -44,6 +44,11 @@ public abstract class Visitor : MonoBehaviour
         Bullet bullet = coll.gameObject.GetComponent<Bullet>();
         ChangeColor(bullet.Color);
     }
+
+    void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
     #endregion
 
 }
