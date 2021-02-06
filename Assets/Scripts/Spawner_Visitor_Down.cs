@@ -21,7 +21,7 @@ public class Spawner_Visitor_Down : Spawner_Visitor
 
         GameObject randomVisitor = Instantiate(randomVisitorPrefab, spawnPosition, Quaternion.identity);
         randomVisitor.AddComponent<Mover_Down>();
-        randomVisitor.GetComponent<Visitor_Bee_Colored>().enabled = true;
+        randomVisitor.GetComponent<Visitor_Bee_FullColor>().enabled = true;
     }
     #endregion
 

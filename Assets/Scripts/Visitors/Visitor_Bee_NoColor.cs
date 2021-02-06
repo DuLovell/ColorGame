@@ -3,11 +3,10 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Visitor_Bee_Colorless : Visitor_Bee
+public class Visitor_Bee_NoColor : Visitor_Bee
 {
 
     #region Fields
-
     #endregion
 
     #region Properties

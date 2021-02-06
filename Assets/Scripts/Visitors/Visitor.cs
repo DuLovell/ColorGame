@@ -9,6 +9,7 @@ public abstract class Visitor : MonoBehaviour
     protected Dictionary<string, string> oppositeColors;
 
     protected SpriteRenderer sr;
+    protected Rigidbody2D rb;
     float velocity;
     #endregion
 
@@ -20,6 +21,7 @@ public abstract class Visitor : MonoBehaviour
     void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
 
         colors = new Dictionary<string, bool>();
         oppositeColors = new Dictionary<string, string>

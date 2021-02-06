@@ -22,7 +22,7 @@ public abstract class Visitor_Bee : Visitor
 
     protected override void AddSpriteColors()
     {
-        colors.Add("yellow", true);
+        colors.Add("orange", true);
         colors.Add("red", true);
         SetSpriteColorsValues();
     }
@@ -35,13 +35,13 @@ public abstract class Visitor_Bee : Visitor
         try
         {
             // change sprite to match colors in "colors" Dictionary
-            if (colors["yellow"] && colors["red"])
+            if (colors["orange"] && colors["red"])
                 sr.sprite = beeColored;
-            else if (!colors["yellow"] && !colors["red"])
+            else if (!colors["orange"] && !colors["red"])
                 sr.sprite = beeGray;
-            else if (!colors["yellow"] && colors["red"])
+            else if (!colors["orange"] && colors["red"])
                 sr.sprite = beeRed;
-            else if (colors["yellow"] && !colors["red"])
+            else if (colors["orange"] && !colors["red"])
                 sr.sprite = beeYellow;
         }
         catch (Exception)

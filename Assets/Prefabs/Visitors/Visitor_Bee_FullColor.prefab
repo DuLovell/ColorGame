@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 652149022672316231}
   - component: {fileID: 977907805}
   - component: {fileID: -5932116884065190854}
-  - component: {fileID: 4757008170034385927}
   m_Layer: 0
-  m_Name: Visitor_Bee
+  m_Name: Visitor_Bee_FullColor
   m_TagString: Visitor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,28 +129,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 868395452842676249}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 971813ef7faa5154a8232af6d2b6a20f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  beeColored: {fileID: -2332983640317547041, guid: 3050a1583f57e2b4680219bbd1121a35,
-    type: 3}
-  beeRed: {fileID: -126367013384081014, guid: 3050a1583f57e2b4680219bbd1121a35, type: 3}
-  beeYellow: {fileID: -5474950934700313699, guid: 3050a1583f57e2b4680219bbd1121a35,
-    type: 3}
-  beeGray: {fileID: -4355955560570230870, guid: 3050a1583f57e2b4680219bbd1121a35,
-    type: 3}
---- !u!114 &4757008170034385927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 868395452842676249}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3b7e45e2a06bff418e06e94e8f8984d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   beeColored: {fileID: -2332983640317547041, guid: 3050a1583f57e2b4680219bbd1121a35,

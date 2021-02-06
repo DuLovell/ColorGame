@@ -21,7 +21,7 @@ public class Spawner_Visitor_Up : Spawner_Visitor
 
         GameObject randomVisitor = Instantiate(randomVisitorPrefab, spawnPosition, Quaternion.identity);
         randomVisitor.AddComponent<Mover_Up>();
-        randomVisitor.GetComponent<Visitor_Bee_Colorless>().enabled = true;
+        randomVisitor.GetComponent<Visitor_Bee_NoColor>().enabled = true;
 
         
     }

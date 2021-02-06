@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Visitor_Bee_Colored : Visitor_Bee
+public class Visitor_Bee_FullColor : Visitor_Bee
 {
 
     protected override void SetSpriteColorsValues()
