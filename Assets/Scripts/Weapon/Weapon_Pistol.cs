@@ -3,14 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColorWeapon : MonoBehaviour
+public class Weapon_Pistol : MonoBehaviour
 {
     #region Fields
-    [SerializeField]
-    GameObject bulletPrefab;
+    [SerializeField] GameObject bulletPrefab;
 
     GameObject bullet;
-    BulletColorMarker bulletColorMarkerScript;
+    ColorMarker colorMarker;
     #endregion
 
     #region Propeties
@@ -18,9 +17,13 @@ public class ColorWeapon : MonoBehaviour
     #endregion
 
     #region Methods
+    void Awake()
+    {
+        colorMarker = transform.Find("ColorMarker").GetComponent<ColorMarker>();
+    }
     void Start()
     {
-        bulletColorMarkerScript = transform.Find("BulletColorMarker").GetComponent<BulletColorMarker>();
+        
     }
 
     void Update()
@@ -48,8 +51,8 @@ public class ColorWeapon : MonoBehaviour
         Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
         SpriteRenderer bulletSr = bullet.GetComponent<SpriteRenderer>();
 
-        bulletSr.color = bulletColorMarkerScript.SpriteColor;
-        bulletScript.Color = bulletColorMarkerScript.Color;
+        bulletSr.color = colorMarker.SpriteColor;
+        bulletScript.Color = colorMarker.Color;
         bulletRB.AddForce(direction * 20f, ForceMode2D.Impulse);
     }
     #endregion

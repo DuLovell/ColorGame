@@ -5,9 +5,6 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     #region Fields
-
-
-    // values
     Vector2 direction;
     string color;
     float velocity;

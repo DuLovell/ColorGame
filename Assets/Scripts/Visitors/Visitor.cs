@@ -8,6 +8,7 @@ public abstract class Visitor : MonoBehaviour
     protected Dictionary<string, bool> colors;
     protected Dictionary<string, string> oppositeColors;
 
+    protected SpriteRenderer sr;
     float velocity;
     #endregion
 
@@ -16,9 +17,10 @@ public abstract class Visitor : MonoBehaviour
     #endregion
 
     #region Methods
-    // Start is called before the first frame update
-    protected virtual void Start()
+    void Awake()
     {
+        sr = GetComponent<SpriteRenderer>();
+
         colors = new Dictionary<string, bool>();
         oppositeColors = new Dictionary<string, string>
         {
@@ -29,20 +31,32 @@ public abstract class Visitor : MonoBehaviour
             ["blue"] = "orange",
             ["yellow"] = "violet"
         };
+
+
     }
 
+    // Start is called before the first frame update
+    protected virtual void Start()
+    {
+        AddSpriteColors();
+        ChangeSpriteColor();
+    }
+
+    
+    
     // Update is called once per frame
     void Update()
     {
 
     }
 
-    protected abstract void ChangeColor(string color);
+    protected abstract void ChangeSpriteColor(string bulletColor = default);
+    protected abstract void AddSpriteColors();
 
     void OnCollisionEnter2D(Collision2D coll)
     {
         Bullet bullet = coll.gameObject.GetComponent<Bullet>();
-        ChangeColor(bullet.Color);
+        ChangeSpriteColor(bullet.Color);
     }
 
     void OnBecameInvisible()

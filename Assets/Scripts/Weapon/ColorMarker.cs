@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletColorMarker : MonoBehaviour
+public class ColorMarker : MonoBehaviour
 {
     #region Fields
     bool isColoring = false;
@@ -10,6 +10,7 @@ public class BulletColorMarker : MonoBehaviour
     float startTime;
     string color;
     SpriteRenderer sr;
+    Weapon_Pistol weapon_Pistol;
     #endregion
 
     #region Properties
@@ -25,10 +26,15 @@ public class BulletColorMarker : MonoBehaviour
     #endregion
 
     #region Methods
+    void Awake()
+    {
+        sr = GetComponent<SpriteRenderer>();
+        weapon_Pistol = GetComponent<Weapon_Pistol>();
+    }
     // Start is called before the first frame update
     void Start()
     {
-        sr = GetComponent<SpriteRenderer>();
+        
     }
 
     // Update is called once per frame

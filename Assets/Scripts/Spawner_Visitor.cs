@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class VisitorSpawner : MonoBehaviour
+public abstract class Spawner_Visitor : MonoBehaviour
 {
     #region Fields
     [SerializeField]

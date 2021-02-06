@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VisitorUpSpawner : VisitorSpawner
+public class Spawner_Visitor_Down : Spawner_Visitor
 {
     #region Fields
 
@@ -17,10 +17,11 @@ public class VisitorUpSpawner : VisitorSpawner
     {
         Collider2D collider = randomVisitorPrefab.GetComponent<Collider2D>();
         float colliderHalfWidth = collider.bounds.extents.y;
-        Vector3 spawnPosition = new Vector3(-4, ScreenUtils.ScreenBottom - colliderHalfWidth - 1.5f);
-        randomVisitorPrefab.AddComponent<MoverUp>();
+        Vector3 spawnPosition = new Vector3(4, ScreenUtils.ScreenTop + colliderHalfWidth + 1.5f);
 
-        Instantiate(randomVisitorPrefab, spawnPosition, Quaternion.identity);
+        GameObject randomVisitor = Instantiate(randomVisitorPrefab, spawnPosition, Quaternion.identity);
+        randomVisitor.AddComponent<Mover_Down>();
+        randomVisitor.GetComponent<Visitor_Bee_Colored>().enabled = true;
     }
     #endregion
 

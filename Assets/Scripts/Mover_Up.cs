@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoverDown : Mover
+public class Mover_Up : Mover
 {
     protected override void Start()
     {
         base.Start();
         velocity = 1f;
-        direction = -transform.up;
+        direction = transform.up;
     }
 }
