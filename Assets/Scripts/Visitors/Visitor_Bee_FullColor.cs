@@ -6,7 +6,15 @@ using UnityEngine;
 
 public class Visitor_Bee_FullColor : Visitor_Bee
 {
+    #region Fields
 
+    #endregion
+
+    #region Properties
+
+    #endregion
+
+    #region Methods
     protected override void SetSpriteColorsValues()
     {
         foreach (string key in colors.Keys.ToList())
@@ -15,7 +23,7 @@ public class Visitor_Bee_FullColor : Visitor_Bee
         }
     }
 
-    protected override void ChangeColor(string bulletColor) 
+    protected override void ChangeColor(string bulletColor)
     {
         try
         {
@@ -25,6 +33,8 @@ public class Visitor_Bee_FullColor : Visitor_Bee
         {
             Debug.LogWarning(error.Message);
         }
-        
+
     }
+    #endregion
+
 }

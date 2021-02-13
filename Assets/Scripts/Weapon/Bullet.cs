@@ -5,28 +5,14 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     #region Fields
-    Vector2 direction;
-    string color;
-    float velocity;
     #endregion
 
     #region Properties
-    public string Color
-    {
-        get { return color; }
-        set { color = value; }
-    }
+    public string Color { get; set; }
 
-    public Vector2 Direction
-    {
-        get { return direction; }
-        set { direction = value; }
-    }
+    public Vector2 Direction { get; set; }
 
-    public float Velocity
-    {
-        get { return velocity; }
-    }
+    public float Velocity { get; private set; }
 
     #endregion
 
@@ -34,8 +20,8 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        velocity = 20f;
-        direction = transform.right;
+        Velocity = 20f;
+        Direction = transform.right;
     }
 
     // Update is called once per frame

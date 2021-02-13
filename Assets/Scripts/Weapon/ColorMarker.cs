@@ -8,16 +8,13 @@ public class ColorMarker : MonoBehaviour
     bool isColoring = false;
     bool timer = false;
     float startTime;
-    string color;
+    
     SpriteRenderer sr;
     Weapon_Pistol weapon_Pistol;
     #endregion
 
     #region Properties
-    public string Color
-    {
-        get { return color; }
-    }
+    public string Color { get; private set; }
 
     public Color SpriteColor
     {
@@ -102,32 +99,32 @@ public class ColorMarker : MonoBehaviour
 
             if (color == "violet")
             {
-                this.color = "violet";
+                Color = "violet";
                 sr.color = new Color32(127, 0, 255, 255);
             }
             else if (color == "orange")
             {
-                this.color = "orange";
+                Color = "orange";
                 sr.color = new Color32(252, 147, 3, 255);
             }
             else if (color == "green")
             {
-                this.color = "green";
+                Color = "green";
                 sr.color = UnityEngine.Color.green;
             }
             else if (color == "red")
             {
-                this.color = "red";
+                Color = "red";
                 sr.color = UnityEngine.Color.red;
             }
             else if (color == "blue")
             {
-                this.color = "blue";
+                Color = "blue";
                 sr.color = UnityEngine.Color.blue;
             }
             else if (color == "yellow")
             {
-                this.color = "yellow";
+                Color = "yellow";
                 sr.color = UnityEngine.Color.yellow;
             }
         }

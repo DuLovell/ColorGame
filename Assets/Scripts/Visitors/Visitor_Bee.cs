@@ -5,6 +5,7 @@ using UnityEngine;
 
 public abstract class Visitor_Bee : Visitor
 {
+    #region Fields
     [SerializeField]
     Sprite beeColored;
 
@@ -16,10 +17,15 @@ public abstract class Visitor_Bee : Visitor
 
     [SerializeField]
     Sprite beeGray;
+    #endregion
 
+    #region Properties
 
+    #endregion
+
+    #region Methods
     protected abstract void SetSpriteColorsValues();
-
+    
     protected override void AddSpriteColors()
     {
         colors.Add("orange", true);
@@ -46,11 +52,16 @@ public abstract class Visitor_Bee : Visitor
         }
         catch (Exception)
         {
-            
+
         }
-        
+
     }
 
     protected abstract void ChangeColor(string bulletColor);
+    #endregion
+
+    
+
+    
 
 }
